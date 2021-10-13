@@ -1,0 +1,20 @@
+body {
+    color: rgb(179, 131, 131);
+}
+
+.contaner {
+    box-sizing: border-box;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contaner_sell {
+    box-sizing: border-box;
+    padding: 10px;
+    border: solid black;
+}
+
+.goblin__non {
+    visibility: hidden;
+}
