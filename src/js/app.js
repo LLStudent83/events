@@ -1,19 +1,8 @@
-function game() {
-  const arrImgEl = Array.from(document.querySelectorAll('.goblin'));
-  const visibleElementInd = arrImgEl.findIndex((elem) => !elem.classList.contains('goblin__non'));
+import GameController from "./GameController";
+import GamePlay from "./GamePlay";
 
-  if (visibleElementInd !== -1) {
-    arrImgEl[visibleElementInd].classList.add('goblin__non');
-  }
-
-  let rendomPosition = Math.floor(Math.random() * 3);
-
-  while ((visibleElementInd) === rendomPosition) {
-    rendomPosition = Math.floor(Math.random() * 4);
-  }
-
-  const elem = arrImgEl[rendomPosition];
-  elem.classList.remove('goblin__non');
-}
-
-setInterval(game, 1000);
+const gamePlay = new GamePlay();
+const gameController = new GameController(gamePlay);
+gameController.init();
+//const fnGameController = gameController.initGame.bind(GameController);
+//setInterval(fnGameController, 1000);

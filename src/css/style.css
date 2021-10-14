@@ -7,6 +7,8 @@ body {
     width: 300px;
     display: flex;
     flex-wrap: wrap;
+    /* cursor: url(../img/kharli_kvinn_cursor.png); */
+    cursor: crosshair;
 }
 
 .contaner_sell {
@@ -17,4 +19,23 @@ body {
 
 .goblin__non {
     visibility: hidden;
+}
+
+.info {
+    margin-bottom: 20px;
+}
+
+.info__game-score {
+    color: green;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.info__game-missed {
+    color: red;
+    display: flex;
+}
+
+.info__field-name {
+    margin-right: 5px;
 }
