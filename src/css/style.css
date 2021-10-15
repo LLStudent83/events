@@ -7,8 +7,8 @@ body {
     width: 300px;
     display: flex;
     flex-wrap: wrap;
-    /* cursor: url(../img/kharli_kvinn_cursor.png); */
-    cursor: crosshair;
+    cursor: url(../img/cursor.png);
+    /* cursor: crosshair; */
 }
 
 .contaner_sell {
@@ -38,4 +38,13 @@ body {
 
 .info__field-name {
     margin-right: 5px;
+}
+
+.end-message {
+    border: 5px solid red;
+    padding: 10px;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
 }

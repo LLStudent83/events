@@ -15,12 +15,12 @@ module.exports = {
     rules: [
       {
         test: /\.(png|jpg|gif)$/i,
+        dependency: { not: ['url'] }, // отключает лоадер
         use: [
           {
             loader: 'url-loader',
             options: {
               limit: 8192,
-              name:'assets/[hash].[ext]',
             },
           },
         ],

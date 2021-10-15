@@ -31,7 +31,11 @@ export default class GamePlay {
             for (let i = 0; i < this.arrSellEl.length; i++) {
                 this.arrSellEl[i].removeEventListener('click', this.click);
               };
-              // clearInterval(GameController.intervalId)
+             const divEnd = document.createElement('div');
+             divEnd.textContent = 'Вы проиграли, надо быть резче';
+             divEnd.classList.add('end-message');
+             document.body.append(divEnd);
+
         }
     }
 
