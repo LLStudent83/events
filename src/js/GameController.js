@@ -1,10 +1,10 @@
 /* eslint-disable no-plusplus */
+import GamePlay from './GamePlay';
+
 export default class GameController {
   constructor(gamePlay) {
     this.gamePlay = gamePlay;
     this.arrImgEl = [];
-    //     this.elemContaner = document.querySelector('.contaner');
-    // this.arrImgEl = Array.from(document.querySelectorAll('.goblin'));
   }
 
   initGame() {
@@ -23,11 +23,18 @@ export default class GameController {
 
     const elem = this.arrImgEl[rendomPosition];
     elem.classList.remove('goblin__non');
+    this.gamePlay.missed++;
+    // const printMissed = this.gamePlay.printMissed.bind(GamePlay);
+    // setTimeout(printMissed, 1000);
+    this.gamePlay.checkMissed();
+    this.gamePlay.printMissed();
   }
 
   init() {
-    this.intervalId = setInterval(this.initGame, 1000);
+    const initGame = this.initGame.bind(this);
+    this.gamePlay.intervalId = setInterval(initGame, 1000);
     this.arrSellEl = Array.from(document.querySelectorAll('.contaner_sell'));
+    // устанавливаем обработчик события click на ячейки
     for (let i = 0; i < this.arrSellEl.length; i++) {
       this.arrSellEl[i].addEventListener('click', this.gamePlay.click);
     }
