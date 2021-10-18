@@ -1,5 +1,4 @@
 /* eslint-disable no-plusplus */
-
 export default class GameController {
   constructor(gamePlay) {
     this.gamePlay = gamePlay;
