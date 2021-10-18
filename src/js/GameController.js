@@ -27,6 +27,6 @@ export default class GameController {
 
   init() {
     const initGame = this.initGame.bind(this);
-    this.gamePlay.intervalId = setInterval(initGame, 600);
+    this.gamePlay.intervalId = setInterval(initGame, this.gamePlay.speed);
   }
 }

@@ -1,6 +1,7 @@
 /* eslint-disable no-plusplus */
 export default class GamePlay {
   constructor() {
+    this.speed = 600;
     this.elemContaner = document.querySelector('.contaner');
     this.score = document.querySelector('.info__game-score-text')
       .textContent;
@@ -62,7 +63,7 @@ export default class GamePlay {
       this.elemContaner.addEventListener('click', (event) => {
         resolve(event);
       });
-      this.timeoutId = setTimeout(() => { reject(); }, 900);
+      this.timeoutId = setTimeout(() => { reject(); }, this.speed - 10);
     });
 
     promise.then((event) => {
